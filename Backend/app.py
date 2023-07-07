@@ -23,6 +23,7 @@ def create_app(config_name):
     with app.app_context():
         # Import the models here to ensure they are registered with SQLAlchemy
         from Server.Models.user import Users
+        from Server.Models.customers import Customer,Transactions,LoyaltyPoints
         # Create the database tables (if they don't exist)
         db.create_all()
 
