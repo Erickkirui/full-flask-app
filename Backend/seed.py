@@ -5,7 +5,7 @@ from config import app_config
 config_name = "development"
 
 def seed_data(config_name):
-    app = create_app(app_config[config_name])
+    app = create_app(config_name)
     with app.app_context():
         user1 = Users(username='john_doe', email='john@example.com', password='Passw0rd')
         user2 = Users(username='jane_smith', email='jane@example.com', password='Passw0rd')
